@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --primary-color:#10375C;
+}
+body{
+    font-family: "Sora", sans-serif;
+    font-size: 1.6rem;
+}
+/* common */
+a{
+    text-decoration: none;
+}
+.btn{
+    --height:60px;
+    height:var(--height);
+    display: inline-block;
+    color:#fff;
+    background: #2E80CE;
+    padding: 0 20px;
+    border-radius: 99px;
+    line-height: var(--height);
+    min-width: 205px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: 1px solid #2E80CE;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+} 
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp,1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2{
+    --line-clamp:2;
+}
+.break-all{
+    word-break: break-all;
+}
+.container{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    padding-top: 30px;
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+.logo{
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+}
+
+.logo__circle::before,
+.logo__circle::after{
+    content: "";
+    border-radius: 50%;
+    display: inline-block;
+}
+.logo__circle::before{
+    width: 3em;
+    height: 3em;
+    background: #2E80CE;
+}
+.logo__circle::after{
+    position: absolute;
+    width: 1.6em;
+    height: 1.6em;
+    top: 1.1em;
+    left: 1.1em;
+    background: #fff;
+}
+.logo__text{
+    margin-left: 0.6em;
+    text-align: right;
+}
+.logo__brand{
+    display: block;
+    color: #FFF;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+.logo__brand--smile{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__list{
+    display: flex;
+}
+.action__login,
+.navbar__link{
+    padding: 4px 21px;
+    color: #C9D2DA;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.action__login:hover,
+.navbar__link:hover,
+.navbar__item--active{
+    color: #FFF;
+    text-shadow: 1px 0 0 currentColor;
+}
+.navbar__item--active::before{
+    ontent: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    left: -8px;
+    top: -3px;c
+}
+.action__signup{
+    --height:44px;
+    min-width: 104px;
+}
