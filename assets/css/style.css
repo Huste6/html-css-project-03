@@ -10,10 +10,18 @@ html{
 body{
     font-family: "Sora", sans-serif;
     font-size: 1.6rem;
+
 }
 /* common */
 a{
     text-decoration: none;
+}
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
 }
 .btn{
     --height:60px;
@@ -108,14 +116,14 @@ a{
 .navbar__list{
     display: flex;
 }
-.action__login,
+.header-action__login,
 .navbar__link{
     padding: 4px 21px;
     color: #C9D2DA;
     font-size: 1.3rem;
     font-weight: 300;
 }
-.action__login:hover,
+.header-action__login:hover,
 .navbar__link:hover,
 .navbar__item--active{
     color: #FFF;
@@ -132,7 +140,71 @@ a{
     left: -8px;
     top: -3px;c
 }
-.action__signup{
+.header-action{
+    display: flex;
+    align-items: center;
+}
+.header-action__login{
+    margin-right: 7px;
+}
+.header-action__signup{
     --height:44px;
     min-width: 104px;
+}
+/* hero */
+.hero{
+    display: flex;
+    margin-top: 76px;
+    align-items: center;
+}
+.hero__contain{
+    flex-shrink: 0;
+    width: 44%;
+}
+.hero__media{
+    flex-grow: 1;
+}
+.hero__heading{
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+.hero__desc{
+    color: #C9D2DA;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+    margin-top: 22px;
+}
+.hero__row{
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+.hero__phone{
+    margin-left: 38px;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 1.67;
+}
+.hero__images{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.hero__img{
+    width: 330px;
+    height: 540px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+.hero__img:first-child{
+    position: relative;
+    margin-right: -6px;
+}
+.hero__img:last-child{
+    width: 210px;
+    height: 410px;
 }
