@@ -74,6 +74,33 @@ button {
     font-weight: 300;
     line-height: 1.67;
 }
+.control{
+    display:flex;
+    align-items:center;
+    column-gap:18px;
+}
+.control__btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border:0.5px solid ##575F66;
+    outline: none;
+    background: #fff;
+    color: #575F66;
+    transition: 0.25s;
+}
+.control__btn:hover{
+    border-color: #2E80CE;
+    background: #2E80CE;
+    color:#fff;
+    cursor: pointer;
+}
+.control-icon{
+    rotate: 180deg;
+}
 /* header */
 .header{
     padding: 30px 0 110px;
@@ -110,6 +137,7 @@ button {
     text-align: right;
 }
 .logo__brand{
+    font-family: "Sora",sans-serif;
     display: block;
     color: #FFF;
     font-size: 1.8em;
@@ -395,7 +423,10 @@ button {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
 }
-
+.member__control{
+    margin-top: 38px;
+    justify-content:center;
+}
 .member-item__img-bg{
     padding-top: 28px;
     background: #EAF6FF;
@@ -421,36 +452,7 @@ button {
     font-weight: 300;
     line-height: 1.86;
 }
-/* member__control */
-.member__control{
-    margin-top: 38px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    column-gap:18px;
-}
-.member__control-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border:0.5px solid ##575F66;
-    outline: none;
-    background: #fff;
-    color: #575F66;
-    transition: 0.25s;
-}
-.member__control-btn:hover{
-    border-color: #2E80CE;
-    background: #2E80CE;
-    color:#fff;
-    cursor: pointer;
-}
-.member__control-icon{
-    rotate: 180deg;
-}
+
 /* install */
 .install{
     margin-top: calc(85px + 95px);
@@ -492,3 +494,226 @@ button {
     border: none;
     background: transparent; 
 }*/
+/* news */
+.news{
+    padding: 85px 0;
+    margin-top: 85px;
+}
+.news__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news__heading{
+    max-width: 470px;
+}
+.new__more{
+    display: inline-block;
+    margin-top: 28px;
+    color: #10375C;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.56;
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+}
+.news__control{
+    margin-top: 28px;
+}
+.news__list{
+    display: flex;
+    max-width: 570px;
+    column-gap:30px;
+}
+.news-item{
+    flex:1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+.news-item:hover{
+    cursor: pointer;
+    box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+    transform: translateY(-18px);
+}
+.news-item:hover .news-item__link{
+    color: #2E80CE;
+}
+.news-item:hover .news-item__body{
+    border-color: #fff;
+}
+.news-item:hover .news__item-img{
+    transform: scale(1.1);
+}
+.news-item__thumb{
+    height: 172px;
+    overflow: hidden;
+}
+.news__item-img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+}
+.news-item__body{
+    border-radius: 0 0 12px 12px;
+    border: 1px solid #E8EBEE;
+    border-top: none;
+    padding: 24px 24px 16px;
+}
+.news-item__heading{
+    color: #10375C;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.63;
+}
+.news-item__desc{
+    color: #575F66;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.71;
+    margin: 10px 0 12px;
+}
+.news-item__link{
+    color: #10375C;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+/* Appointment */
+.appointment{
+    margin-top: 85px;
+}
+.appointment__inner{
+    padding:100px 70px;
+    background: #F6FBFF;
+    text-align: center;
+}
+.appointment__heading{
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+.appointment__heading::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 136px;
+    height: 2px;
+    background: #2E80CE;
+    /* margin-top: 20px; */
+    /* left: 50%;
+    transform: translateX(-50%);  */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.appointment__desc{
+    max-width: 617px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    /* margin: 18px auto 38px */
+}
+.appointment__btn{
+    margin-top: 38px;
+}
+/* footer */
+.footer{
+    background: #10375C;
+    padding-top: 100px;
+    font-family: "Open Sans", sans-serif;
+}
+.footer__row{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+}
+.footer__desc{
+    margin-top: 20px;
+    color: #A9B3BB;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.footer__heading{
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+.footer__list{
+    margin-bottom: 28px;
+}
+.footer__link{
+    color: #A9B3BB;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    white-space: nowrap;
+}
+.footer__link:hover{
+    text-decoration: underline;
+}
+.footer__item{
+    margin-bottom: 10px;
+}
+.footer__social{
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 28px;
+}
+.footer__social-btn{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: 0.25s;
+    color:#2E80CE;
+}
+.footer__social-btn:hover{
+    color:#fff;
+    background: #2E80CE;
+}
+.footer-form{
+    margin-top: 10px;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+.footer-form__input{
+    width: 212px;
+    height: 46px;
+    outline: none;
+    border: 1px solid #406181;
+    background: transparent;
+    padding: 0 10px;
+    color:#fff;
+}
+.footer-form__input::placeholder{
+    color: #9CA8B1;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+.footer-form__submit{
+    min-width: 108px;
+    --height: 46px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.footer__copyright{
+    border-top:1px solid #406181;
+    padding:28px 0 42px;
+}
+.footer__copyright-text{
+    color: #AAB3BA;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
